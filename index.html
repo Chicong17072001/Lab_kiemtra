@@ -6,17 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    a {
+        display: none;
+    }
+</style>
 <body>
-    <form>
+    <a href="loginSucces.html">ádasdasd</a>
+    <div onsubmit="handlesubmit">
         <div class="group_input">
             <label>Tên đăng nhập</label>
-            <input type="text" placeholder="txtUserName"/>
+            <input class="name" type="text" placeholder="txtUserName" />
         </div>
         <div class="group_input">
-            <label>Password</label>
-            <input type="text" placeholder="TxtPassword"/>
+            <label>Mật Khẩu</label>
+            <input class="pass" type="text" placeholder="TxtPassword" />
         </div>
         <button>đăng nhập</button>
-    </form>
+    </div>
 </body>
+
+ <script>
+        const name = document.querySelector('.name')
+        const Pass = document.querySelector('.pass')
+        const btn = document.querySelector('button')
+        const a = document.querySelector('a')
+   
+    btn.onclick = ()=>{
+        if(name.value.trim() == "admin" && Pass.value.trim() == "admin"){
+            a.click()
+        }else{
+            alert("Đang nhập thất bại")
+        }
+    }
+</script>
+</scrip>
 </html>
